@@ -1,0 +1,1840 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>United Ummah — Revival Roadmap</title>
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+  <meta name="description" content="United Ummah Revival Roadmap: The First Step for Preparation for Imam Mahdi, Revival of Islam, and Establishing Khilafah.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="../fonts.googleapis.com/css2/family=Cinzel_wght@400;600;700&amp;family=Inter_wght@300;400;500;600;700&amp;family=Amiri_ital,wght@0,400;0,700;1,400&amp;display=swap.css" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-deepest: #040c06;
+      --bg-dark:    #060f08;
+      --bg-card:    #0a1a0e;
+      --bg-card2:   #0d2012;
+      --bg-hover:   #112616;
+      --green-900:  #0c2810;
+      --green-800:  #124e16;
+      --green-700:  #18641c;
+      --green-600:  #20821c;
+      --green-500:  #2ca027;
+      --green-400:  #46c041;
+      --green-300:  #70d96c;
+      --green-200:  #a6eea8;
+      --green-100:  #d6f8d6;
+      --gold:       #c8a020;
+      --gold-light: #e2bc3e;
+      --gold-pale:  #f5dfa0;
+      --text-primary:   #e6f5e6;
+      --text-secondary: #a0c8a0;
+      --text-muted:     #688868;
+      --text-gold:      #d2a630;
+      --border:     rgba(44, 160, 39, 0.16);
+      --border-gold: rgba(200, 160, 32, 0.22);
+      --glow:       0 0 28px rgba(44, 160, 39, 0.16);
+      --radius:     10px;
+      --radius-lg:  16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-deepest);
+      color: var(--text-primary);
+      line-height: 1.75;
+      font-size: 15px;
+      overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg-dark); }
+    ::-webkit-scrollbar-thumb { background: var(--green-700); border-radius: 4px; }
+
+    /* ── PROGRESS BAR ── */
+    #progress-bar {
+      position: fixed; top: 0; left: 0; height: 2px; width: 0%;
+      background: linear-gradient(90deg, var(--green-700), var(--gold));
+      z-index: 1100; transition: width .1s;
+    }
+
+    /* ── NAV ── */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(4, 12, 6, 0.94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 28px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 62px;
+      transition: box-shadow .3s;
+    }
+    #nav.scrolled { box-shadow: 0 4px 36px rgba(0,0,0,.55); }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'Cinzel', serif;
+      font-size: 14px; font-weight: 700;
+      color: var(--green-300);
+      text-decoration: none;
+      letter-spacing: .05em;
+    }
+    .nav-emblem { font-size: 20px; }
+
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav-links a {
+      color: var(--text-secondary); text-decoration: none;
+      font-size: 12.5px; font-weight: 500;
+      padding: 6px 12px; border-radius: 6px;
+      transition: all .2s;
+    }
+    .nav-links a:hover { color: var(--green-300); background: rgba(44,160,39,.1); }
+
+    .nav-toggle {
+      display: none; background: none; border: none;
+      cursor: pointer; color: var(--text-secondary);
+      flex-direction: column; gap: 5px; padding: 4px;
+    }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; transition: all .3s; }
+
+    #mobile-menu {
+      display: none; position: fixed; top: 62px; left: 0; right: 0;
+      background: rgba(4,12,6,.98); border-bottom: 1px solid var(--border);
+      padding: 16px 24px; z-index: 999;
+    }
+    #mobile-menu.open { display: block; }
+    #mobile-menu a {
+      display: block; color: var(--text-secondary); text-decoration: none;
+      padding: 10px 0; border-bottom: 1px solid var(--border);
+      font-size: 14px; font-weight: 500; transition: color .2s;
+    }
+    #mobile-menu a:hover { color: var(--green-300); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 120px 24px 100px;
+      position: relative; overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(20,90,20,.38) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 80% 110%, rgba(44,160,39,.13) 0%, transparent 60%);
+    }
+    .hero-grid {
+      position: absolute; inset: 0; z-index: 0; opacity: .055;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 36px, rgba(44,160,39,.6) 37px),
+        repeating-linear-gradient(90deg, transparent, transparent 36px, rgba(44,160,39,.6) 37px);
+    }
+
+    .hero-content { position: relative; z-index: 1; max-width: 820px; }
+
+    .hero-stamp {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(44,160,39,.1); border: 1px solid rgba(44,160,39,.28);
+      color: var(--green-300); font-size: 11px; font-weight: 700;
+      padding: 6px 16px; border-radius: 50px; letter-spacing: .1em;
+      text-transform: uppercase; margin-bottom: 32px;
+    }
+
+    .hero-arabic {
+      font-family: 'Amiri', serif;
+      font-size: clamp(30px, 7vw, 56px);
+      color: var(--gold-light);
+      line-height: 1.4; margin-bottom: 10px;
+      text-shadow: 0 0 60px rgba(210,166,48,.35);
+    }
+
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(28px, 5.5vw, 50px);
+      font-weight: 700; line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 12px; letter-spacing: .02em;
+    }
+    .hero-title .accent { color: var(--green-400); }
+    .hero-title .gold { color: var(--gold-light); }
+
+    .hero-sub {
+      font-size: clamp(13px, 2.2vw, 16px);
+      color: var(--text-secondary); font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .hero-org {
+      font-family: 'Cinzel', serif; font-size: 12px;
+      color: var(--gold); letter-spacing: .12em; margin-bottom: 44px;
+    }
+
+    .hero-divider {
+      width: 90px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 44px;
+    }
+
+    .hero-pills {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+      margin-bottom: 48px;
+    }
+    .pill {
+      padding: 8px 18px; border-radius: 50px; font-size: 12px; font-weight: 600;
+      letter-spacing: .05em; border: 1px solid;
+    }
+    .pill-green { background: rgba(44,160,39,.12); color: var(--green-300); border-color: rgba(44,160,39,.25); }
+    .pill-gold  { background: rgba(200,160,32,.12); color: var(--gold-light); border-color: rgba(200,160,32,.25); }
+
+    .btn-hero {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, var(--green-800), var(--green-700));
+      color: var(--green-100); font-weight: 700; font-size: 14px;
+      padding: 14px 32px; border-radius: 8px; text-decoration: none;
+      border: 1px solid var(--green-600);
+      box-shadow: 0 6px 28px rgba(44,160,39,.22);
+      transition: all .25s;
+    }
+    .btn-hero:hover { background: linear-gradient(135deg, var(--green-700), var(--green-600)); transform: translateY(-2px); box-shadow: 0 10px 36px rgba(44,160,39,.32); }
+
+    .scroll-hint {
+      position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      color: var(--text-muted); font-size: 10px; letter-spacing: .12em;
+      animation: bob 2.2s infinite ease-in-out;
+    }
+    @keyframes bob { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+
+    /* ── STAGES QUICK BAR ── */
+    .stages-bar {
+      background: var(--bg-dark); border-bottom: 1px solid var(--border);
+      padding: 18px 28px; overflow-x: auto;
+    }
+    .stages-bar-inner {
+      display: flex; align-items: center; gap: 0;
+      max-width: 1100px; margin: 0 auto; min-width: 700px;
+    }
+    .stage-pill {
+      display: flex; align-items: center; gap: 8px; cursor: pointer;
+      padding: 10px 14px; border-radius: 8px;
+      font-size: 12.5px; font-weight: 600;
+      color: var(--text-muted); transition: all .2s; white-space: nowrap;
+    }
+    .stage-pill:hover { background: var(--bg-hover); color: var(--green-300); }
+    .stage-pill .num {
+      width: 26px; height: 26px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700;
+      background: rgba(44,160,39,.12); color: var(--green-400);
+      border: 1px solid rgba(44,160,39,.22); flex-shrink: 0;
+    }
+    .stage-arrow { color: var(--border); font-size: 16px; padding: 0 2px; flex-shrink: 0; }
+
+    /* ── LAYOUT ── */
+    .page-wrap { max-width: 1000px; margin: 0 auto; padding: 0 28px; }
+
+    /* ── SECTION ── */
+    .section {
+      padding: 80px 0 64px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section:last-child { border-bottom: none; }
+
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 700;
+      color: var(--green-400); letter-spacing: .12em; text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .section-label::before {
+      content: ''; display: block;
+      width: 22px; height: 2px; background: var(--green-600);
+    }
+
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(20px, 4vw, 32px); font-weight: 700;
+      color: var(--text-primary); margin-bottom: 20px; line-height: 1.2;
+    }
+
+    .lead {
+      color: var(--text-secondary); font-size: 15.5px; line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    p + p { margin-top: 14px; }
+
+    /* ── BEFORE-AFTER LIST ── */
+    .before-after {
+      display: flex; flex-direction: column; gap: 10px; margin: 24px 0;
+    }
+    .ba-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 14px 18px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 14px; color: var(--text-secondary); line-height: 1.6;
+    }
+    .ba-item .ba-icon { font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+
+    /* ── QUOTE BLOCK ── */
+    .quote-block {
+      border-left: 3px solid var(--gold);
+      padding: 20px 24px;
+      margin: 28px 0;
+      background: rgba(200,160,32,.06);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .quote-block p { color: var(--text-secondary); font-size: 14.5px; line-height: 1.8; font-style: italic; }
+    .quote-block p + p { margin-top: 10px; }
+    .quote-block strong { color: var(--gold-pale); font-style: normal; }
+
+    /* ── DECLARATION ROWS ── */
+    .declaration-list {
+      display: flex; flex-direction: column; gap: 8px; margin: 20px 0;
+    }
+    .decl-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      color: var(--text-secondary); font-size: 14.5px; line-height: 1.65;
+    }
+    .decl-item::before {
+      content: '◆'; color: var(--green-500); font-size: 9px; margin-top: 7px; flex-shrink: 0;
+    }
+
+    /* ── CARDS ── */
+    .card-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px; margin-top: 28px;
+    }
+    .card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 24px;
+      transition: all .25s; position: relative; overflow: hidden;
+    }
+    .card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--green-800), var(--green-500));
+    }
+    .card:hover { border-color: rgba(44,160,39,.32); transform: translateY(-3px); box-shadow: var(--glow); }
+    .card-icon { font-size: 26px; margin-bottom: 12px; }
+    .card-title { font-weight: 700; color: var(--text-primary); font-size: 14.5px; margin-bottom: 8px; }
+    .card-body { color: var(--text-secondary); font-size: 13.5px; line-height: 1.65; }
+
+    /* ── STAGE ACCORDION ── */
+    .stage-header {
+      display: flex; align-items: flex-start; gap: 20px;
+      padding: 26px 28px 22px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      margin-top: 44px; cursor: pointer; transition: all .2s;
+    }
+    .stage-header:hover { background: var(--bg-hover); }
+
+    .stage-number {
+      width: 52px; height: 52px; border-radius: 12px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cinzel', serif; font-size: 18px; font-weight: 700;
+      background: linear-gradient(135deg, var(--green-900), var(--green-800));
+      border: 1px solid var(--green-700); color: var(--green-300);
+    }
+
+    .stage-header-text { flex: 1; }
+    .stage-number-label { font-size: 11px; color: var(--text-muted); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px; }
+    .stage-title-main { font-family: 'Cinzel', serif; font-size: clamp(16px, 3vw, 22px); font-weight: 700; color: var(--text-primary); line-height: 1.2; }
+    .stage-desc-short { color: var(--text-muted); font-size: 13px; margin-top: 6px; line-height: 1.5; }
+
+    .stage-chevron { font-size: 18px; color: var(--green-500); transition: transform .3s; margin-top: 4px; flex-shrink: 0; }
+    .stage-header.open .stage-chevron { transform: rotate(180deg); }
+
+    .stage-body {
+      background: var(--bg-card2);
+      border: 1px solid var(--border); border-top: none;
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      padding: 28px; display: none;
+    }
+    .stage-body.open { display: block; }
+
+    /* ── SUB-STAGE ── */
+    .sub-stage { background: rgba(10,26,14,.65); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 18px; }
+    .sub-stage:last-of-type { margin-bottom: 0; }
+    .sub-stage-header {
+      display: flex; align-items: center; gap: 14px;
+      padding: 15px 20px; cursor: pointer; transition: background .2s;
+    }
+    .sub-stage-header:hover { background: var(--bg-hover); }
+    .sub-stage-num {
+      width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(44,160,39,.12); color: var(--green-400);
+      font-size: 12px; font-weight: 700; border: 1px solid rgba(44,160,39,.2);
+    }
+    .sub-stage-title { flex: 1; font-weight: 600; font-size: 14px; color: var(--text-primary); }
+    .sub-stage-chevron { color: var(--green-500); font-size: 13px; transition: transform .3s; }
+    .sub-stage-header.open .sub-stage-chevron { transform: rotate(180deg); }
+    .sub-stage-body { padding: 0 20px 20px; display: none; }
+    .sub-stage-body.open { display: block; }
+
+    /* ── RESOURCE CARDS ── */
+    .resource-card {
+      background: rgba(4,12,6,.75); border: 1px solid var(--border-gold);
+      border-radius: var(--radius); padding: 18px 20px; margin-bottom: 14px;
+      position: relative; overflow: hidden;
+    }
+    .resource-card::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+      background: linear-gradient(180deg, var(--gold), var(--gold-light));
+    }
+    .resource-card:last-child { margin-bottom: 0; }
+    .resource-tag {
+      display: inline-block; padding: 2px 8px; border-radius: 4px;
+      font-size: 10px; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; margin-bottom: 8px;
+    }
+    .resource-tag.english { background: rgba(44,100,168,.2); color: #8eb6f0; }
+    .resource-tag.urdu    { background: rgba(168,44,100,.2); color: #f08eb6; }
+    .resource-tag.book    { background: rgba(168,120,44,.2); color: #f0c88e; }
+    .resource-tag.audio   { background: rgba(100,44,168,.2); color: #c88ef0; }
+    .resource-tag.both    { background: rgba(44,168,100,.2); color: #8ef0c8; }
+    .resource-name { font-weight: 700; color: var(--text-primary); font-size: 14px; margin-bottom: 4px; }
+    .resource-by { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; }
+    .resource-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(44,160,39,.12); color: var(--green-300);
+      font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 6px;
+      text-decoration: none; border: 1px solid rgba(44,160,39,.22);
+      transition: all .2s; word-break: break-all;
+    }
+    .resource-link:hover { background: rgba(44,160,39,.22); color: var(--green-200); }
+
+    /* ── OUTCOME BOX ── */
+    .outcome-box {
+      background: rgba(44,160,39,.06); border: 1px solid rgba(44,160,39,.18);
+      border-radius: var(--radius); padding: 20px 24px; margin-top: 24px;
+    }
+    .outcome-title {
+      font-family: 'Cinzel', serif; font-size: 13.5px; font-weight: 700;
+      color: var(--green-300); margin-bottom: 14px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .outcome-title::before { content: '✦'; color: var(--gold); }
+
+    /* ── NOTE BOX ── */
+    .note-box {
+      background: rgba(200,160,32,.07); border: 1px solid rgba(200,160,32,.18);
+      border-radius: var(--radius); padding: 16px 20px; margin-top: 18px;
+      font-size: 13.5px; color: var(--text-secondary); line-height: 1.7;
+    }
+    .note-box strong { color: var(--gold-light); }
+
+    /* ── PHASE STEPS ── */
+    .phase-list { display: flex; flex-direction: column; gap: 0; }
+    .phase-item { display: flex; gap: 20px; position: relative; padding-bottom: 28px; }
+    .phase-item:last-child { padding-bottom: 0; }
+    .phase-left { display: flex; flex-direction: column; align-items: center; width: 44px; flex-shrink: 0; }
+    .phase-num {
+      width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 14px;
+      background: var(--green-900); color: var(--green-300);
+      border: 2px solid var(--green-700); z-index: 1;
+    }
+    .phase-line { width: 2px; flex: 1; background: var(--border); margin-top: 4px; }
+    .phase-item:last-child .phase-line { display: none; }
+    .phase-content { flex: 1; padding-top: 8px; }
+    .phase-title { font-weight: 700; font-size: 15px; color: var(--text-primary); margin-bottom: 6px; }
+    .phase-desc { font-size: 13.5px; color: var(--text-secondary); line-height: 1.65; }
+
+    /* ── TRACK DIVIDER ── */
+    .track-divider {
+      display: flex; align-items: center; gap: 14px;
+      margin: 22px 0 14px; color: var(--text-muted); font-size: 11px;
+      font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    }
+    .track-divider::before, .track-divider::after {
+      content: ''; flex: 1; height: 1px; background: var(--border);
+    }
+
+    /* ── TIME TABLE ── */
+    .time-table { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 22px; }
+    .time-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+    .time-card-label { font-size: 11px; font-weight: 700; color: var(--green-400); letter-spacing: .07em; text-transform: uppercase; margin-bottom: 8px; }
+    .time-card-duration { font-family: 'Cinzel', serif; font-size: 26px; font-weight: 700; color: var(--text-primary); line-height: 1; margin-bottom: 6px; }
+    .time-card-unit { font-size: 12px; color: var(--text-muted); }
+
+    /* ── GUIDELINES ── */
+    .guideline-list { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+    .guideline-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 14px 18px;
+    }
+    .guideline-num {
+      width: 28px; height: 28px; border-radius: 6px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(44,160,39,.12); color: var(--green-400);
+      font-size: 12px; font-weight: 700;
+    }
+    .guideline-text { color: var(--text-secondary); font-size: 13.5px; line-height: 1.6; }
+
+    /* ── CONTRAST SECTION ── */
+    .contrast-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 28px;
+    }
+    .contrast-col { border-radius: var(--radius); padding: 22px; }
+    .contrast-col.not-us { background: rgba(168,44,44,.08); border: 1px solid rgba(168,44,44,.18); }
+    .contrast-col.us { background: rgba(44,160,39,.08); border: 1px solid rgba(44,160,39,.22); }
+    .contrast-heading { font-weight: 700; font-size: 13px; letter-spacing: .07em; text-transform: uppercase; margin-bottom: 14px; }
+    .contrast-col.not-us .contrast-heading { color: #e08888; }
+    .contrast-col.us .contrast-heading { color: var(--green-300); }
+    .contrast-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .contrast-list li { font-size: 13.5px; line-height: 1.55; display: flex; gap: 10px; }
+    .contrast-col.not-us .contrast-list li::before { content: '✕'; color: #e08888; flex-shrink: 0; font-size: 11px; margin-top: 3px; }
+    .contrast-col.us .contrast-list li::before { content: '✔'; color: var(--green-400); flex-shrink: 0; font-size: 11px; margin-top: 3px; }
+    .contrast-col.not-us .contrast-list li { color: #c8a0a0; }
+    .contrast-col.us .contrast-list li { color: var(--text-secondary); }
+
+    /* ── PRACTICAL TRACKS ── */
+    .track-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 24px; }
+    .track-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 18px 20px;
+      transition: all .2s;
+    }
+    .track-card:hover { border-color: rgba(44,160,39,.28); background: var(--bg-hover); }
+    .track-card-icon { font-size: 22px; margin-bottom: 8px; }
+    .track-card-name { font-weight: 700; color: var(--green-300); font-size: 13.5px; margin-bottom: 6px; }
+    .track-card-desc { color: var(--text-muted); font-size: 12.5px; line-height: 1.5; }
+
+    /* ── ENDING VISION ── */
+    .vision-section {
+      background: var(--bg-dark);
+      border-top: 1px solid var(--border);
+    }
+
+    .vision-hero {
+      text-align: center;
+      padding: 80px 28px 60px;
+      position: relative; overflow: hidden;
+    }
+    .vision-glow {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 0, rgba(44,160,39,.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .vision-arabic {
+      font-family: 'Amiri', serif;
+      font-size: clamp(24px, 5vw, 44px);
+      color: var(--gold-light); margin-bottom: 28px; line-height: 1.5;
+      text-shadow: 0 0 50px rgba(210,166,48,.3);
+    }
+    .vision-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(22px, 4.5vw, 38px); font-weight: 700;
+      color: var(--text-primary); margin-bottom: 16px;
+    }
+    .vision-title span { color: var(--green-400); }
+
+    .salahuddin-box {
+      max-width: 680px; margin: 36px auto;
+      background: linear-gradient(135deg, rgba(10,26,14,.95), rgba(14,34,18,.95));
+      border: 1px solid rgba(200,160,32,.28);
+      border-radius: var(--radius-lg); padding: 36px 40px;
+      position: relative; overflow: hidden;
+    }
+    .salahuddin-box::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 80% 0, rgba(200,160,32,.1), transparent 55%);
+    }
+    .salahuddin-box-inner { position: relative; z-index: 1; }
+    .salahuddin-box-name {
+      font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: .15em;
+      color: var(--gold); text-transform: uppercase; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .salahuddin-box-name::before, .salahuddin-box-name::after {
+      content: ''; flex: 1; height: 1px; background: rgba(200,160,32,.25);
+    }
+    .salahuddin-box blockquote {
+      font-family: 'Amiri', serif; font-size: clamp(16px, 3vw, 22px);
+      color: var(--gold-pale); line-height: 1.7; margin-bottom: 16px;
+      font-style: italic; text-align: center;
+    }
+    .salahuddin-box p { color: var(--text-secondary); font-size: 14px; line-height: 1.75; text-align: center; }
+
+    .roadmap-steps {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 0;
+      max-width: 860px; margin: 40px auto 0; align-items: center;
+    }
+    .roadmap-step {
+      text-align: center; padding: 14px 20px;
+    }
+    .roadmap-step-icon { font-size: 28px; margin-bottom: 8px; }
+    .roadmap-step-text { font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: .04em; text-transform: uppercase; }
+    .roadmap-step-text strong { display: block; color: var(--green-300); font-size: 13px; margin-bottom: 2px; }
+    .roadmap-arrow { font-size: 20px; color: rgba(44,160,39,.3); padding: 0 4px; }
+
+    .final-calls {
+      max-width: 700px; margin: 44px auto 0;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .final-call-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: rgba(44,160,39,.07); border: 1px solid rgba(44,160,39,.16);
+      border-radius: var(--radius); padding: 14px 20px;
+      font-size: 14px; color: var(--text-secondary); line-height: 1.6;
+    }
+    .final-call-item .call-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+    .ameen-box {
+      max-width: 560px; margin: 44px auto 0; text-align: center;
+      padding: 32px 40px;
+      background: rgba(200,160,32,.07);
+      border: 1px solid rgba(200,160,32,.22);
+      border-radius: var(--radius-lg);
+    }
+    .ameen-arabic { font-family: 'Amiri', serif; font-size: clamp(20px, 4vw, 32px); color: var(--gold-light); margin-bottom: 14px; line-height: 1.5; }
+    .ameen-dua { color: var(--text-secondary); font-size: 14px; line-height: 1.8; font-style: italic; }
+    .ameen-word { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: var(--gold); margin-top: 16px; }
+
+    /* ── CONTACT ── */
+    .contact-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 22px; }
+    .contact-item {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 13px 18px;
+      color: var(--text-secondary); font-size: 13.5px;
+      text-decoration: none; transition: all .2s;
+    }
+    .contact-item:hover { border-color: rgba(44,160,39,.3); color: var(--green-300); }
+
+    /* ── BACK-TO-TOP ── */
+    #back-top {
+      position: fixed; bottom: 24px; right: 24px;
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--green-800); border: 1px solid var(--green-600);
+      color: var(--green-300); font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: all .2s;
+      opacity: 0; pointer-events: none; z-index: 900;
+    }
+    #back-top.visible { opacity: 1; pointer-events: auto; }
+    #back-top:hover { background: var(--green-700); transform: translateY(-2px); }
+
+    /* ── FADE-IN ── */
+    .fade-in { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .stages-bar { display: none; }
+      .contrast-grid { grid-template-columns: 1fr; }
+      .stage-header { flex-direction: column; gap: 14px; }
+      .salahuddin-box { padding: 24px 20px; }
+      .roadmap-steps { gap: 4px; }
+      .roadmap-arrow { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<button id="back-top" aria-label="Back to top">↑</button>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <span class="nav-emblem">☪</span> United Ummah
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">The Roadmap</a></li>
+    <li><a href="index.html">Deen Foundation</a></li>
+    <li><a href="index.html">Curriculum</a></li>
+    <li><a href="index.html">After Foundation</a></li>
+    <li><a href="index.html">Vision</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu">
+  <a href="index.html">The Roadmap</a>
+  <a href="index.html">Deen Foundation</a>
+  <a href="index.html">Curriculum</a>
+  <a href="index.html">After Foundation</a>
+  <a href="index.html">Vision</a>
+  <a href="index.html">Contact</a>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ HERO -->
+<header class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-content">
+    <div class="hero-stamp">☪ United Ummah</div>
+
+    <div class="hero-arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+
+    <h1 class="hero-title">
+      United Ummah<br>
+      <span class="accent">Revival</span> <span class="gold">Roadmap</span>
+    </h1>
+    <p class="hero-sub">The First Step for Preparation for Imam Mahdi,<br>Revival of Islam, and Establishing Khilafah</p>
+    <p class="hero-org">☪ Build the Muslim First ☪</p>
+
+    <div class="hero-divider"></div>
+
+    <p style="color:var(--text-secondary); font-size:14.5px; max-width:580px; margin:0 auto 32px; line-height:1.8;">
+      Before strength comes guidance. Before action comes knowledge. Before leadership comes purification. Before Khilafah comes the people who are worthy of carrying it.
+    </p>
+
+    <div class="hero-pills">
+      <span class="pill pill-green">Quran &amp; Seerah</span>
+      <span class="pill pill-green">Iman &amp; Akhirah</span>
+      <span class="pill pill-gold">Khilafah Foundation</span>
+      <span class="pill pill-gold">Preparation for Revival</span>
+    </div>
+
+    <a href="index.html" class="btn-hero">Begin the Roadmap ↓</a>
+  </div>
+
+  <div class="scroll-hint"><span>SCROLL</span><span>↓</span></div>
+</header>
+
+<!-- STAGES QUICK BAR -->
+<div class="stages-bar">
+  <div class="stages-bar-inner">
+    <div class="stage-pill" onclick="scrollToStage('stage1')"><div class="num">1</div>Quran Reading</div>
+    <span class="stage-arrow">›</span>
+    <div class="stage-pill" onclick="scrollToStage('stage2')"><div class="num">2</div>Iman &amp; Foundation</div>
+    <span class="stage-arrow">›</span>
+    <div class="stage-pill" onclick="scrollToStage('stage3')"><div class="num">3</div>Advanced Seerah</div>
+    <span class="stage-arrow">›</span>
+    <div class="stage-pill" onclick="scrollToStage('stage4')"><div class="num">4</div>Salah &amp; Quran</div>
+    <span class="stage-arrow">›</span>
+    <div class="stage-pill" onclick="scrollToStage('stage5')"><div class="num">5</div>Islamic Laws</div>
+    <span class="stage-arrow">›</span>
+    <div class="stage-pill" onclick="scrollToStage('stage6')"><div class="num">6</div>Lifelong Learning</div>
+  </div>
+</div>
+
+<main>
+<div class="page-wrap">
+
+<!-- ══════════════════════════════════════════════════════ SECTION 1 — THE ROADMAP -->
+<section class="section fade-in" id="roadmap">
+  <div class="section-label">The Foundation</div>
+  <h2 class="section-title">Before Anything Else — The Truth Must Be Clear</h2>
+  <div class="lead">
+    Before United Ummah can call people towards preparation for Imam Mahdi, revival of Islam, and establishing Khilafah — we must be absolutely clear about one thing:
+  </div>
+
+  <div class="quote-block">
+    <p>We cannot begin this mission by simply calling people to gather forces, form armies, build groups, learn fighting, pick up swords, start physical combat training, or rush into confrontation wherever oppression is happening.</p>
+    <p><strong>That is not how real Islamic revival begins.</strong></p>
+  </div>
+
+  <div class="before-after" style="margin-bottom:28px;">
+    <div class="ba-item"><span class="ba-icon">📖</span><span><strong style="color:var(--text-primary)">Before strength</strong> — comes guidance.</span></div>
+    <div class="ba-item"><span class="ba-icon">💡</span><span><strong style="color:var(--text-primary)">Before action</strong> — comes knowledge.</span></div>
+    <div class="ba-item"><span class="ba-icon">💎</span><span><strong style="color:var(--text-primary)">Before leadership</strong> — comes purification.</span></div>
+    <div class="ba-item"><span class="ba-icon">🛡️</span><span><strong style="color:var(--text-primary)">Before resistance</strong> — comes discipline.</span></div>
+    <div class="ba-item"><span class="ba-icon">🕌</span><span><strong style="color:var(--text-primary)">Before Khilafah</strong> — comes the people who are worthy of carrying Khilafah.</span></div>
+  </div>
+
+  <p class="lead">
+    If we call untrained, emotional, confused, weak, undisciplined, and spiritually empty people towards major responsibilities — the result will not be revival. <strong style="color:var(--text-primary)">The result will be chaos.</strong>
+  </p>
+
+  <div class="note-box">
+    The mission of Imam Mahdi, the revival of Islam, and the establishment of Khilafah cannot be carried by people who do not know the Quran, do not understand Salah, do not know the Seerah of Prophet Muhammad ﷺ, do not understand Akhirah, do not understand Islamic responsibility, do not know the systems of Islam, and do not have discipline over themselves.
+  </div>
+
+  <div class="before-after" style="margin-top:28px;">
+    <div class="ba-item"><span class="ba-icon">🕋</span><span>Before we need people who can stand in the field — we need people who can <strong style="color:var(--green-300)">stand in Salah.</strong></span></div>
+    <div class="ba-item"><span class="ba-icon">💬</span><span>Before we need people who can speak against oppression — we need people who can <strong style="color:var(--green-300)">speak the truth against their own nafs.</strong></span></div>
+    <div class="ba-item"><span class="ba-icon">🌍</span><span>Before we need people who can defend the Ummah — we need people who <strong style="color:var(--green-300)">understand what the Ummah is.</strong></span></div>
+    <div class="ba-item"><span class="ba-icon">👑</span><span>Before we need people who can talk about Khilafah — we need people who <strong style="color:var(--green-300)">understand the Deen that Khilafah is meant to establish.</strong></span></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ SECTION 2 — THE FIRST STEP -->
+<section class="section fade-in" id="first-step">
+  <div class="section-label">The First Step</div>
+  <h2 class="section-title">The First Step Is to Build the Muslim Individual</h2>
+  <div class="lead">
+    This is why the first step of United Ummah is <strong style="color:var(--text-primary)">not</strong> physical training, not digital activism, not financial power, not public campaigns, not Masjid revival, and not political organization.
+  </div>
+
+  <p style="color:var(--text-secondary); font-size:14.5px; margin-bottom:24px;">We need Muslims who are:</p>
+
+  <div class="declaration-list">
+    <div class="decl-item">Whose hearts are connected with Allah.</div>
+    <div class="decl-item">Who can read the Quran correctly.</div>
+    <div class="decl-item">Who understand the purpose of life.</div>
+    <div class="decl-item">Who know the Seerah of Prophet Muhammad ﷺ.</div>
+    <div class="decl-item">Who understand the stories of the Prophets.</div>
+    <div class="decl-item">Who understand the Khulafa-e-Rashideen.</div>
+    <div class="decl-item">Who understand Salah with meaning.</div>
+    <div class="decl-item">Who understand Akhirah and accountability.</div>
+    <div class="decl-item">Who understand Islam as a complete way of life.</div>
+    <div class="decl-item">Who understand Khilafah with knowledge, not emotion.</div>
+    <div class="decl-item">Who are disciplined, sincere, patient, courageous, organized, and useful for the Ummah.</div>
+  </div>
+
+  <div class="note-box" style="margin-top:28px;">
+    <strong>Only after this foundation</strong> can a person move towards the next responsibilities.
+  </div>
+
+  <!-- NOT US vs US -->
+  <div style="margin-top:36px;">
+    <h3 style="font-family:'Cinzel',serif; font-size:16px; color:var(--text-primary); margin-bottom:16px;">United Ummah is calling people to:</h3>
+    <div class="contrast-grid">
+      <div class="contrast-col not-us">
+        <div class="contrast-heading">Not This</div>
+        <ul class="contrast-list">
+          <li>Chaos</li>
+          <li>Blind anger</li>
+          <li>Empty slogans</li>
+          <li>Emotional followers</li>
+          <li>Rushing without preparation</li>
+          <li>Untrained, confused people</li>
+        </ul>
+      </div>
+      <div class="contrast-col us">
+        <div class="contrast-heading">This</div>
+        <ul class="contrast-list">
+          <li>Preparation</li>
+          <li>Disciplined strength</li>
+          <li>Quran, Sunnah, Seerah, knowledge, action, unity and responsibility</li>
+          <li>Prepared Muslims</li>
+          <li>Serious, patient, organized builders</li>
+          <li>People worthy of carrying this mission</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ SECTION 3 — DEEN FOUNDATION -->
+<section class="section fade-in" id="foundation">
+  <div class="section-label">Entry Point</div>
+  <h2 class="section-title">The Deen Foundation — Your Entry into United Ummah</h2>
+  <div class="lead">
+    Whoever joins United Ummah for the mission of preparation for Imam Mahdi, revival of Islam, and establishing Khilafah — <strong style="color:var(--green-300)">must begin here according to his or her level.</strong>
+  </div>
+
+  <div class="phase-list" style="margin-top:28px;">
+    <div class="phase-item">
+      <div class="phase-left"><div class="phase-num">1</div><div class="phase-line"></div></div>
+      <div class="phase-content">
+        <div class="phase-title">Cannot Read Quran?</div>
+        <div class="phase-desc">You begin with <strong style="color:var(--green-300)">Quran reading</strong> — Stage 1 of the curriculum.</div>
+      </div>
+    </div>
+    <div class="phase-item">
+      <div class="phase-left"><div class="phase-num">2</div><div class="phase-line"></div></div>
+      <div class="phase-content">
+        <div class="phase-title">Can Read Quran — But No Foundation of Iman, Seerah &amp; Akhirah?</div>
+        <div class="phase-desc">You begin with the <strong style="color:var(--green-300)">foundation stage</strong> — Stage 2 of the curriculum.</div>
+      </div>
+    </div>
+    <div class="phase-item">
+      <div class="phase-left"><div class="phase-num">3</div></div>
+      <div class="phase-content">
+        <div class="phase-title">Have Basic Knowledge?</div>
+        <div class="phase-desc">You move towards <strong style="color:var(--green-300)">advanced Seerah, Quran understanding, Islamic laws, Islamic systems and Khilafah foundation</strong> — Stages 3 through 6.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note-box" style="margin-top:28px;">
+    This is how United Ummah builds people step by step. <strong>No one should jump to later stages without first building the foundation.</strong>
+  </div>
+</section>
+
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════ CURRICULUM SECTION (dark bg) -->
+<div style="background:var(--bg-dark); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+<div class="page-wrap">
+<section class="section fade-in" id="curriculum">
+  <div class="section-label">The Curriculum</div>
+  <h2 class="section-title">The Six Stages of the Deen Foundation</h2>
+  <div class="lead">
+    The curriculum is structured across <strong style="color:var(--green-300)">six progressive stages</strong>. Every student of United Ummah follows this roadmap according to their current level. Each stage builds upon the last — there is no shortcut and no jumping ahead.
+  </div>
+
+  <!-- ─────────────────────── STAGE 1 -->
+  <div id="stage1">
+  <div class="stage-header" onclick="toggleStage(this)">
+    <div class="stage-number">1</div>
+    <div class="stage-header-text">
+      <div class="stage-number-label">Stage 1</div>
+      <div class="stage-title-main">Learning to Read the Quran</div>
+      <div class="stage-audience-badges">
+        <span class="badge badge-children">Children</span>
+        <span class="badge badge-teen">Teenagers</span>
+        <span class="badge badge-adult">Adults</span>
+        <span class="badge badge-revert">Reverts</span>
+      </div>
+    </div>
+    <div class="stage-chevron">▼</div>
+  </div>
+  <div class="stage-body">
+    <p style="color:var(--text-secondary); font-size:14px; margin-bottom:24px;">
+      Stage 1 is for children, teenagers, adults and reverts who need to learn Quran reading from the beginning or improve their reading. The first and most important requirement for this stage is a <strong style="color:var(--text-primary)">teacher</strong>. The teacher may be a Madrassah teacher, online teacher or private teacher. Quran reading and Tajweed require correction, listening and guidance. In most cases, a student should not try to learn Quran reading completely alone. However, if a student cannot find or afford a teacher, the following resources can help as support material.
+    </p>
+    <p style="color:var(--text-secondary); font-size:14px; margin-bottom:24px;">
+      The goal of Stage 1 is that the student becomes able to <strong style="color:var(--green-300)">read the Quran properly, confidently and beautifully</strong>.
+    </p>
+
+    <!-- Sub-stage 1.1 -->
+    <div class="sub-stage">
+      <div class="sub-stage-header" onclick="toggleSubStage(this)">
+        <div class="sub-stage-num">1.1</div>
+        <div class="sub-stage-title">Quran Reading Basics</div>
+        <span class="sub-stage-chevron">▼</span>
+      </div>
+      <div class="sub-stage-body">
+        <div class="track-divider">English Track</div>
+        <div class="resource-card">
+          <span class="resource-tag english">English</span>
+          <div class="resource-name">Read Al Quran — The Easy Way, 3 Minute Series</div>
+          <div class="resource-by">By: Understand Al Quran Official</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PL62RQxDpIL7UVwWybFwbG9b68l9ZUWCHF&amp;si=pr7f3QaGKl2rgyuP" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+        <div class="track-divider">Urdu Track</div>
+        <div class="resource-card">
+          <span class="resource-tag urdu">Urdu</span>
+          <div class="resource-name">Read Al Quran — The Easy Way &amp; With Tajweed, 5 Minute Series</div>
+          <div class="resource-by">By: Understand Al Quran Official</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PL62RQxDpIL7W9NRQl7I0enF7U8jSI13tr&amp;si=-TrMnO6peIcQ-Cvr" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+        <div class="note-box">
+          These resources can help children, teenagers, adults and reverts learn how to read the Quran in a simple and structured way. A Madrassah teacher can also use these videos as class support — assign daily videos, explain what students do not understand, correct their reading, and track their progress. This makes the learning material consistent and makes class tracking easier.
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-stage 1.2 -->
+    <div class="sub-stage">
+      <div class="sub-stage-header" onclick="toggleSubStage(this)">
+        <div class="sub-stage-num">1.2</div>
+        <div class="sub-stage-title">Tajweed Support — Optional (Highly Recommended)</div>
+        <span class="sub-stage-chevron">▼</span>
+      </div>
+      <div class="sub-stage-body">
+        <p style="color:var(--text-secondary); font-size:13.5px; margin-bottom:16px;">
+          This stage is optional but highly recommended for students who want to improve Tajweed and recitation quality. The teacher can use these lessons alongside regular Qaida, Nazra and Tajweed classes.
+        </p>
+        <div class="track-divider">English Track</div>
+        <div class="resource-card">
+          <span class="resource-tag english">English</span>
+          <div class="resource-name">Learn Tajweed the Easy Way, 3 Minute Series</div>
+          <div class="resource-by">By: Free Quranic Education</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PLwNeHLk_z0aSekqYqJdRtuYS74rcGXoWF&amp;si=OvSSoWuonjl8XrKw" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+        <div class="track-divider">Urdu Track</div>
+        <div class="resource-card">
+          <span class="resource-tag urdu">Urdu</span>
+          <div class="resource-name">Learn Tajweed the Easy Way, 3 Minute Series</div>
+          <div class="resource-by">By: Understand Al Quran Official</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PL62RQxDpIL7UwbxX6uzFzMLsk_Yfk5EUs&amp;si=1mSQJWi-yXtO9tda" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-stage 1.3 -->
+    <div class="sub-stage">
+      <div class="sub-stage-header" onclick="toggleSubStage(this)">
+        <div class="sub-stage-num">1.3</div>
+        <div class="sub-stage-title">Full Quran Reading Practice</div>
+        <span class="sub-stage-chevron">▼</span>
+      </div>
+      <div class="sub-stage-body">
+        <p style="color:var(--text-secondary); font-size:13.5px; margin-bottom:16px;">
+          In this stage, the student reads through the entire Quran once for fluency, confidence and practice.
+        </p>
+        <div class="resource-card">
+          <span class="resource-tag both">All Languages</span>
+          <div class="resource-name">Full Quran Recitation Practice</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PLwGJCASZfx4OKFE2TjvBhiNKUyfLa8f6B&amp;si=eyOTX_GGhypX8mZ1" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+        <div class="note-box">
+          <strong>Important:</strong> This does not mean that the student must complete Stage 1.3 before moving to Stage 2. Rather, Stage 1.3 should run <strong>parallel with Stage 2</strong>. This means that while the student continues practicing Quran reading, the student should also begin learning the foundation of Iman, Seerah, Prophets' stories and Islamic history through Stage 2. This prevents Quran reading from becoming only a mechanical task and helps the student build love and understanding at the same time.
+        </div>
+      </div>
+    </div>
+
+    <!-- Outcome -->
+    <div class="outcome-box">
+      <div class="outcome-title">Stage 1 Outcome</div>
+      <ul class="bullet-list">
+        <li>Be able to read the Quran properly.</li>
+        <li>Have basic Tajweed understanding.</li>
+        <li>Have improved recitation fluency.</li>
+        <li>Have read through the Quran once for practice.</li>
+        <li>Be ready to continue deeper Islamic learning.</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  <!-- ─────────────────────── STAGE 2 -->
+  <div id="stage2">
+  <div class="stage-header" onclick="toggleStage(this)">
+    <div class="stage-number">2</div>
+    <div class="stage-header-text">
+      <div class="stage-number-label">Stage 2 — Runs parallel with Stage 1.3</div>
+      <div class="stage-title-main">Building Iman, Interest and Islamic Foundation</div>
+      <div class="stage-audience-badges">
+        <span class="badge badge-children">Children</span>
+        <span class="badge badge-teen">Teenagers</span>
+        <span class="badge badge-adult">Adults</span>
+        <span class="badge badge-revert">Reverts</span>
+      </div>
+    </div>
+    <div class="stage-chevron">▼</div>
+  </div>
+  <div class="stage-body">
+    <p style="color:var(--text-secondary); font-size:14px; margin-bottom:16px;">
+      This is <strong style="color:var(--green-300)">one of the most important stages</strong> of the curriculum. If a student reads the Quran but does not understand who revealed it, who received it, what message it carries, what the purpose of life is, and what will happen after death, then Quran reading can become a burden instead of a source of love and guidance.
+    </p>
+    <p style="color:var(--text-secondary); font-size:14px; margin-bottom:24px;">
+      For this reason, Stage 2 is designed to <strong style="color:var(--text-primary)">build the heart before heavier learning begins</strong>. This stage introduces students to:
+    </p>
+    <ul class="bullet-list" style="margin-bottom:28px;">
+      <li>Stories of the Prophets.</li>
+      <li>Seerah of Prophet Muhammad ﷺ.</li>
+      <li>Day of Judgement.</li>
+      <li>Akhirah.</li>
+      <li>Jannah and Jahannam.</li>
+      <li>Khulafa-e-Rashideen.</li>
+      <li>Islamic history.</li>
+      <li>The purpose and mission of Islam.</li>
+    </ul>
+
+    <!-- KIDS TRACK -->
+    <div style="background:rgba(72,200,67,.06); border:1px solid rgba(72,200,67,.2); border-radius:10px; padding:20px; margin-bottom:20px;">
+      <div style="font-family:'Cinzel',serif; font-size:15px; font-weight:700; color:#72db6e; margin-bottom:8px;">
+        ★ Stage 2 for Kids
+      </div>
+      <p style="color:var(--text-secondary); font-size:13.5px; margin-bottom:16px;">
+        This section is for Madrassah children, homeschooled children and school-going children. To run this stage, the Madrassah only needs internet and a screen where YouTube can be played.
+      </p>
+      <div class="track-divider">English Track</div>
+      <div class="resource-card">
+        <span class="resource-tag english">English</span>
+        <div class="resource-name">Islamic History</div>
+        <div class="resource-by">By: Iqra Cartoon</div>
+        <a class="resource-link" href="https://youtube.com/playlist?list=PLs6YIr-PdysB6IFsajaczscqfqo27O3cr&amp;si=3HVo6bpLMZFTWjGu" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        <p style="color:var(--text-muted); font-size:12.5px; margin-top:10px; line-height:1.6;">
+          For children who understand English, this is a very strong resource. It introduces children to Islamic history in an animated and engaging way. It covers the journey from Prophet Adam ﷺ to Prophet Muhammad ﷺ and then the period of the four rightly guided caliphs. For young children, this can create love, interest and emotional connection with Islam. This resource can run parallel with Stage 1.3 Quran reading practice.
+        </p>
+      </div>
+      <div class="track-divider">Urdu Track</div>
+      <div class="resource-card">
+        <span class="resource-tag urdu">Urdu</span>
+        <div class="resource-name">Prophet Stories in Urdu</div>
+        <div class="resource-by">By: Iqra Cartoon</div>
+        <a class="resource-link" href="https://youtube.com/playlist?list=PLs6YIr-PdysAf_xxLJPbfUCSe2JVI9ed5&amp;si=Sg2kX-dNe80Gpdq6" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        <p style="color:var(--text-muted); font-size:12.5px; margin-top:10px; line-height:1.6;">
+          For children who understand Urdu, this playlist introduces the stories of the main Prophets from Prophet Adam ﷺ to Prophet Isa ﷺ. At this stage, if a complete and high-quality Urdu animated Seerah series for children is not available, students can complete this resource first and then continue into the teenage/adult Stage 2 track when they are ready.
+        </p>
+      </div>
+    </div>
+
+    <!-- TEEN/ADULT TRACK -->
+    <div style="background:rgba(201,162,39,.06); border:1px solid rgba(201,162,39,.2); border-radius:10px; padding:20px; margin-bottom:20px;">
+      <div style="font-family:'Cinzel',serif; font-size:15px; font-weight:700; color:#e4c04a; margin-bottom:8px;">
+        ★ Stage 2 for Teenagers, Adults and Reverts
+      </div>
+      <p style="color:var(--text-secondary); font-size:13.5px; margin-bottom:12px;">
+        This track is for teenagers, youth, adults and reverts. It is also for students who have completed the kids track and are now ready for deeper and more realistic visual learning.
+      </p>
+      <p style="color:var(--text-secondary); font-size:13.5px; margin-bottom:12px;">
+        This stage is especially important for those who were born Muslim but never built a deep internal connection with Islam. Many young people may know the Kalimah, but they may still carry many questions in their hearts. If these questions are ignored, they may slowly move away from Deen.
+      </p>
+      <p style="color:var(--text-secondary); font-size:13.5px;">
+        This stage is designed to <strong style="color:var(--text-primary)">rebuild clarity, interest, Iman and purpose</strong>.
+      </p>
+    </div>
+
+    <!-- Sub-stage 2.1 -->
+    <div class="sub-stage">
+      <div class="sub-stage-header" onclick="toggleSubStage(this)">
+        <div class="sub-stage-num">2.1</div>
+        <div class="sub-stage-title">Day of Judgement and Akhirah</div>
+        <span class="sub-stage-chevron">▼</span>
+      </div>
+      <div class="sub-stage-body">
+        <div class="resource-card">
+          <span class="resource-tag both">English &amp; Urdu</span>
+          <div class="resource-name">AI Visualized Series for the Day of Judgement</div>
+          <div class="resource-by">By: Towards Eternity</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PLlZazEh_c4nRdCoJJqYzm4zmDwvnG4RlJ&amp;si=82JgVQAeyO5nhnPg" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+        <div class="note-box">
+          This series gives a strong reality check about life after death. It introduces the student to: <strong>Barzakh, Day of Judgement, Accountability, Jannah, Jahannam, the reality of this temporary world, and the seriousness of preparing for the next life</strong>.<br><br>
+          For teenagers, adults and reverts, this can be a powerful starting point. However, for young children coming from the kids track, this resource may be delayed until later, so that their first connection with Islam is built through love, stories and Seerah rather than fear.
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-stage 2.2 -->
+    <div class="sub-stage">
+      <div class="sub-stage-header" onclick="toggleSubStage(this)">
+        <div class="sub-stage-num">2.2</div>
+        <div class="sub-stage-title">Seerah of Prophet Muhammad ﷺ</div>
+        <span class="sub-stage-chevron">▼</span>
+      </div>
+      <div class="sub-stage-body">
+        <div class="resource-card">
+          <span class="resource-tag both">English &amp; Urdu</span>
+          <div class="resource-name">O Messenger — AI Visualized Series</div>
+          <div class="resource-by">By: Towards Eternity</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PLlZazEh_c4nScNCvGBn8OEf6ujk-sDUpg&amp;si=ivixr3BBATPIJGn-" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+        <div class="note-box">
+          This series introduces the blessed life of Prophet Muhammad ﷺ in a powerful visual format. It helps students understand how Allah sent His final message through Prophet Muhammad ﷺ, what the Prophet ﷺ went through, how Islam was delivered to mankind, and why Muslims must love and follow him.<br><br>
+          For students coming from the kids track, this can be the first major resource after their children's Islamic history foundation. For teenagers, adults and reverts, this should be studied <strong>after the Day of Judgement series</strong>.
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-stage 2.3 -->
+    <div class="sub-stage">
+      <div class="sub-stage-header" onclick="toggleSubStage(this)">
+        <div class="sub-stage-num">2.3</div>
+        <div class="sub-stage-title">Khulafa-e-Rashideen (The Four Rightly Guided Caliphs)</div>
+        <span class="sub-stage-chevron">▼</span>
+      </div>
+      <div class="sub-stage-body">
+        <p style="color:var(--text-secondary); font-size:13.5px; margin-bottom:16px;">
+          This stage helps students understand how the message of Prophet Muhammad ﷺ was followed, protected and carried forward after his passing. Students learn about the leadership, sacrifice, justice, courage and responsibility of the Khulafa-e-Rashideen. This stage also helps students understand how Islam shaped society, leadership and civilization.
+        </p>
+        <div class="resource-card">
+          <span class="resource-tag urdu">Urdu / Hindustani</span>
+          <div class="resource-name">Caliph Abu Bakr رضي الله عنه</div>
+          <div class="resource-by">By: The Kohistani</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PLnWBgzhpIbv9urfAqgy8dVvX4sBPlALym&amp;si=VtZ4NFKZrwq7Qnbq" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+        <div class="resource-card">
+          <span class="resource-tag urdu">Urdu / Hindustani</span>
+          <div class="resource-name">Umar Bin Khattab رضي الله عنه</div>
+          <div class="resource-by">By: The Kohistani</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PLnWBgzhpIbv8w9B89evTEWFvMEJehlenb&amp;si=Q7b8JiclkQ1zNXaw" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+        <div class="resource-card">
+          <span class="resource-tag urdu">Urdu / Hindustani</span>
+          <div class="resource-name">Uthman Bin Affan رضي الله عنه</div>
+          <div class="resource-by">By: The Kohistani</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PLnWBgzhpIbv95Nk8ZG7mYkLHlvFTOmXyM&amp;si=poxWH1ivbVgAdQ3L" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+        <div class="resource-card">
+          <span class="resource-tag urdu">Urdu / Hindustani</span>
+          <div class="resource-name">Ali رضي الله عنه</div>
+          <div class="resource-by">By: The Kohistani</div>
+          <a class="resource-link" href="https://youtu.be/xESGtMNIhls?si=V_trALPoe_7WbYtO" target="_blank" rel="noopener">▶ Watch Video</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-stage 2.4 -->
+    <div class="sub-stage">
+      <div class="sub-stage-header" onclick="toggleSubStage(this)">
+        <div class="sub-stage-num">2.4</div>
+        <div class="sub-stage-title">Prophets' Stories (Compulsory Foundation)</div>
+        <span class="sub-stage-chevron">▼</span>
+      </div>
+      <div class="sub-stage-body">
+        <p style="color:var(--text-secondary); font-size:13.5px; margin-bottom:16px;">
+          This is a <strong style="color:var(--text-primary)">compulsory foundation stage</strong> before Stage 3 for teenagers, adults and reverts. Students should complete one of these tracks according to their language. The purpose is to understand the journey of the Prophets, their struggles, their message, their nations, and the continuity of guidance from Allah.
+        </p>
+        <div class="note-box" style="margin-bottom:16px;">
+          <strong>Note:</strong> Students who already completed Prophets' Stories in the kids track do not need to repeat it immediately. Instead, they can complete the Day of Judgement series at this point.
+        </div>
+        <div class="track-divider">English Track</div>
+        <div class="resource-card">
+          <span class="resource-tag english">English</span>
+          <div class="resource-name">Prophet Stories in English</div>
+          <div class="resource-by">By: Iqra Cartoon</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PLs6YIr-PdysBBJKQEKd1FSMFF3_g6_ien&amp;si=ppuspJDTVG-o9hxO" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+        <div class="track-divider">Urdu Track</div>
+        <div class="resource-card">
+          <span class="resource-tag urdu">Urdu</span>
+          <div class="resource-name">Prophet Stories in Urdu</div>
+          <div class="resource-by">By: Iqra Cartoon</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PLs6YIr-PdysAf_xxLJPbfUCSe2JVI9ed5&amp;si=0FUIjSky7nk4vOBh" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+        <div class="track-divider">For Students Coming From Kids Track</div>
+        <div class="resource-card">
+          <span class="resource-tag both">English &amp; Urdu</span>
+          <div class="resource-name">Day of Judgement AI Visualized Series</div>
+          <div class="resource-by">By: Towards Eternity</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PLlZazEh_c4nRdCoJJqYzm4zmDwvnG4RlJ&amp;si=YhF7U1OWx0KQQWeH" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outcome -->
+    <div class="outcome-box">
+      <div class="outcome-title">Stage 2 Outcome</div>
+      <ul class="bullet-list">
+        <li>A basic understanding of Akhirah.</li>
+        <li>A connection with Prophet Muhammad ﷺ.</li>
+        <li>Knowledge of the Prophets' stories.</li>
+        <li>Awareness of the Khulafa-e-Rashideen.</li>
+        <li>Better interest in Quran and Salah.</li>
+        <li>Stronger foundation of Iman.</li>
+        <li>Readiness for advanced Seerah.</li>
+      </ul>
+      <div style="color:var(--text-muted); font-size:13px; margin-top:14px; line-height:1.65;">
+        At this stage, there is no heavy writing, exam or test requirement. The main purpose is to watch, understand, discuss and build interest.
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- ─────────────────────── STAGE 3 -->
+  <div id="stage3">
+  <div class="stage-header" onclick="toggleStage(this)">
+    <div class="stage-number">3</div>
+    <div class="stage-header-text">
+      <div class="stage-number-label">Stage 3 — After Stage 2</div>
+      <div class="stage-title-main">Advanced Seerah</div>
+      <div class="stage-audience-badges">
+        <span class="badge badge-teen">Teenagers</span>
+        <span class="badge badge-adult">Adults</span>
+        <span class="badge badge-revert">Reverts</span>
+      </div>
+    </div>
+    <div class="stage-chevron">▼</div>
+  </div>
+  <div class="stage-body">
+    <p style="color:var(--text-secondary); font-size:14px; margin-bottom:24px;">
+      After Stage 2, students move to advanced Seerah. This stage <strong style="color:var(--green-300)">deepens the student's understanding</strong> of the life, mission, character, sacrifice and leadership of Prophet Muhammad ﷺ.
+    </p>
+
+    <div class="track-divider">English Track</div>
+    <div class="resource-card">
+      <span class="resource-tag book">Book (English)</span>
+      <div class="resource-name">The Sealed Nectar — Complete English Book</div>
+      <div class="resource-by">Source: Internet Archive</div>
+      <a class="resource-link" href="https://share.google/RlO1eTVXrot2fTqSy" target="_blank" rel="noopener">📥 Download Book</a>
+    </div>
+    <div class="resource-card">
+      <span class="resource-tag audio">Audio (English)</span>
+      <div class="resource-name">The Sealed Nectar — Complete Audiobook</div>
+      <a class="resource-link" href="https://youtube.com/playlist?list=PLTcrsczOTe5KO3o0br3KSSwzCLZpzytjb&amp;si=deVaZ7tl5GV4t1Nu" target="_blank" rel="noopener">▶ Listen on YouTube</a>
+    </div>
+
+    <div class="track-divider">Urdu Track</div>
+    <div class="resource-card">
+      <span class="resource-tag book">Book (Urdu)</span>
+      <div class="resource-name">Al-Raheeq Al-Makhtoom — Complete Urdu PDF</div>
+      <div class="resource-by">Source: Internet Archive</div>
+      <a class="resource-link" href="https://share.google/IiTTxRqMdynkITmwc" target="_blank" rel="noopener">📥 Download Book</a>
+    </div>
+    <div class="resource-card">
+      <span class="resource-tag audio">Audio (Urdu)</span>
+      <div class="resource-name">Seerat-un-Nabi Audiobook</div>
+      <div class="resource-by">By: Sheikh Makki Al Hijazi</div>
+      <a class="resource-link" href="https://youtube.com/playlist?list=PLvlDRNpJgZHPNIG-YEcBgOp0Ca2aCSK1z&amp;si=9svARcKNEzhFmL6I" target="_blank" rel="noopener">▶ Listen on YouTube</a>
+    </div>
+
+    <div style="background:rgba(201,162,39,.07); border:1px solid rgba(201,162,39,.2); border-radius:10px; padding:20px; margin-top:20px;">
+      <div style="font-weight:700; color:var(--gold-light); margin-bottom:12px;">Recommended Method for Stage 3</div>
+      <p style="color:var(--text-secondary); font-size:13.5px; margin-bottom:12px;">Students should maintain a notebook for this stage. Recommended method:</p>
+      <div class="phase-list">
+        <div class="phase-item">
+          <div class="phase-left"><div class="phase-num" style="width:30px;height:30px;font-size:12px;">1</div><div class="phase-line"></div></div>
+          <div class="phase-content" style="padding-top:4px;"><div class="phase-desc">Listen to the Seerah lecture or audiobook.</div></div>
+        </div>
+        <div class="phase-item">
+          <div class="phase-left"><div class="phase-num" style="width:30px;height:30px;font-size:12px;">2</div><div class="phase-line"></div></div>
+          <div class="phase-content" style="padding-top:4px;"><div class="phase-desc">Read the same portion from the Seerah book.</div></div>
+        </div>
+        <div class="phase-item">
+          <div class="phase-left"><div class="phase-num" style="width:30px;height:30px;font-size:12px;">3</div><div class="phase-line"></div></div>
+          <div class="phase-content" style="padding-top:4px;"><div class="phase-desc">Write notes in a notebook.</div></div>
+        </div>
+        <div class="phase-item">
+          <div class="phase-left"><div class="phase-num" style="width:30px;height:30px;font-size:12px;">4</div><div class="phase-line"></div></div>
+          <div class="phase-content" style="padding-top:4px;"><div class="phase-desc">Mention what was studied.</div></div>
+        </div>
+        <div class="phase-item">
+          <div class="phase-left"><div class="phase-num" style="width:30px;height:30px;font-size:12px;">5</div><div class="phase-line"></div></div>
+          <div class="phase-content" style="padding-top:4px;"><div class="phase-desc">Mention what was understood.</div></div>
+        </div>
+        <div class="phase-item">
+          <div class="phase-left"><div class="phase-num" style="width:30px;height:30px;font-size:12px;">6</div><div class="phase-line"></div></div>
+          <div class="phase-content" style="padding-top:4px;"><div class="phase-desc">Mention key lessons from the life of Prophet Muhammad ﷺ.</div></div>
+        </div>
+        <div class="phase-item">
+          <div class="phase-left"><div class="phase-num" style="width:30px;height:30px;font-size:12px;">7</div></div>
+          <div class="phase-content" style="padding-top:4px;"><div class="phase-desc">Discuss important points with the teacher or supervisor.</div></div>
+        </div>
+      </div>
+      <div style="color:var(--text-muted); font-size:13px; margin-top:14px;">
+        This stage should ideally be completed in <strong style="color:var(--gold-light)">2 to 3 months</strong>, depending on the daily time available.
+      </div>
+    </div>
+
+    <div class="outcome-box">
+      <div class="outcome-title">Stage 3 Outcome</div>
+      <ul class="bullet-list">
+        <li>Have a deeper understanding of Seerah.</li>
+        <li>Know the major events of the life of Prophet Muhammad ﷺ.</li>
+        <li>Understand the struggle and mission of Islam.</li>
+        <li>Have personal notes from Seerah.</li>
+        <li>Be ready to understand Quran and Salah more deeply in Stage 4.</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  <!-- ─────────────────────── STAGE 4 -->
+  <div id="stage4">
+  <div class="stage-header" onclick="toggleStage(this)">
+    <div class="stage-number">4</div>
+    <div class="stage-header-text">
+      <div class="stage-number-label">Stage 4 — After Stage 3</div>
+      <div class="stage-title-main">Understanding Salah and Quran</div>
+      <div class="stage-audience-badges">
+        <span class="badge badge-all">All Levels</span>
+      </div>
+    </div>
+    <div class="stage-chevron">▼</div>
+  </div>
+  <div class="stage-body">
+    <p style="color:var(--text-secondary); font-size:14px; margin-bottom:24px;">
+      After advanced Seerah, the student moves towards understanding the words of Salah and basic Quranic meanings. The goal is that the student should not only perform Salah physically, but should also <strong style="color:var(--green-300)">understand what is being recited</strong>.
+    </p>
+
+    <!-- Sub-stage 4.1 -->
+    <div class="sub-stage">
+      <div class="sub-stage-header" onclick="toggleSubStage(this)">
+        <div class="sub-stage-num">4.1</div>
+        <div class="sub-stage-title">Understanding Quran and Salah</div>
+        <span class="sub-stage-chevron">▼</span>
+      </div>
+      <div class="sub-stage-body">
+        <p style="color:var(--text-secondary); font-size:13.5px; margin-bottom:16px;">
+          This stage helps students understand the words of Salah and common Quranic words. After this stage, students should begin to feel more connected in Salah because they will understand what they are saying before Allah.
+        </p>
+        <div class="track-divider">English Track</div>
+        <div class="resource-card">
+          <span class="resource-tag english">English</span>
+          <div class="resource-name">Understand Quran and Salaah the Easy Way, 3 Minute Series</div>
+          <div class="resource-by">By: Free Quranic Education</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PLwNeHLk_z0aQ7rYXtqXCqlSPE_4qxUkF2&amp;si=0iiJ0ebeZ1lDWYTl" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+        <div class="track-divider">Urdu Track</div>
+        <div class="resource-card">
+          <span class="resource-tag urdu">Urdu</span>
+          <div class="resource-name">Understand Al Quran and Salah, 3 Minute Series</div>
+          <div class="resource-by">By: Understand Al Quran Official</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PL62RQxDpIL7Wpdc00d3rJ91crVqkWao7c&amp;si=RlAtnvx2Tjlvdr1E" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-stage 4.2 -->
+    <div class="sub-stage">
+      <div class="sub-stage-header" onclick="toggleSubStage(this)">
+        <div class="sub-stage-num">4.2</div>
+        <div class="sub-stage-title">Full Quran With Translation — Runs parallel with Stage 5</div>
+        <span class="sub-stage-chevron">▼</span>
+      </div>
+      <div class="sub-stage-body">
+        <p style="color:var(--text-secondary); font-size:13.5px; margin-bottom:16px;">
+          In Stage 1.3, the student read the full Quran without translation for recitation practice. In Stage 4.2, the student goes through the full Quran with translation. At this stage, the goal is not detailed Tafseer — the goal is to <strong style="color:var(--text-primary)">understand the basic meaning of the Quran through translation</strong>. Stage 4.2 should run parallel with Stage 5.
+        </p>
+        <div class="track-divider">English Track</div>
+        <div class="resource-card">
+          <span class="resource-tag english">English</span>
+          <div class="resource-name">Quran Recitation With English Translation</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PLWcE3bV3PyuP-WnyusYMlIPqg7qVZSOIm&amp;si=4HuwAGtmn6EF6VDI" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+        <div class="track-divider">Urdu Track</div>
+        <div class="resource-card">
+          <span class="resource-tag urdu">Urdu</span>
+          <div class="resource-name">Full Quran With Urdu Translation</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PL3SWvPT2o0y-sytMGUdlbJX07_EtVtx4w&amp;si=-cbD6nV-5Z8bBH74" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="outcome-box">
+      <div class="outcome-title">Stage 4 Outcome</div>
+      <ul class="bullet-list">
+        <li>Understand the basic meanings of Salah.</li>
+        <li>Recognize common Quranic words.</li>
+        <li>Begin to understand Quran while reading or listening.</li>
+        <li>Feel a stronger connection with Allah through Salah and Quran.</li>
+        <li>Complete the Quran with translation.</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  <!-- ─────────────────────── STAGE 5 -->
+  <div id="stage5">
+  <div class="stage-header" onclick="toggleStage(this)">
+    <div class="stage-number">5</div>
+    <div class="stage-header-text">
+      <div class="stage-number-label">Stage 5 — Runs parallel with Stage 4.2</div>
+      <div class="stage-title-main">Basic Islamic Laws and Systems of Islam</div>
+      <div class="stage-audience-badges">
+        <span class="badge badge-teen">Teenagers</span>
+        <span class="badge badge-adult">Adults</span>
+        <span class="badge badge-revert">Reverts</span>
+      </div>
+    </div>
+    <div class="stage-chevron">▼</div>
+  </div>
+  <div class="stage-body">
+    <p style="color:var(--text-secondary); font-size:14px; margin-bottom:24px;">
+      This stage introduces the student to <strong style="color:var(--green-300)">Islam as a complete way of life</strong>. The student should learn the basic Islamic guidance needed for daily life and the broader systems of Islam.
+    </p>
+
+    <!-- Sub-stage 5.1 -->
+    <div class="sub-stage">
+      <div class="sub-stage-header" onclick="toggleSubStage(this)">
+        <div class="sub-stage-num">5.1</div>
+        <div class="sub-stage-title">Basic Islamic Laws and Daily Life Guidance</div>
+        <span class="sub-stage-chevron">▼</span>
+      </div>
+      <div class="sub-stage-body">
+        <p style="color:var(--text-secondary); font-size:13.5px; margin-bottom:16px;">
+          This section includes the basic and essential Islamic terms, rules and laws needed for daily life. Topics include:
+        </p>
+        <ul class="bullet-list" style="margin-bottom:20px;">
+          <li>Taharah (purification).</li>
+          <li>Salah (prayer).</li>
+          <li>Halal and Haram.</li>
+          <li>Family responsibilities.</li>
+          <li>Rights of parents.</li>
+          <li>Rights of neighbors.</li>
+          <li>Rights of Muslims.</li>
+          <li>Akhlaq (character and manners).</li>
+          <li>Daily life Islamic rules.</li>
+          <li>Basic Fiqh (Islamic jurisprudence).</li>
+          <li>Essential Ahkam (Islamic rulings).</li>
+        </ul>
+        <div class="note-box" style="margin-bottom:16px;">
+          At the moment, a complete and ideal course for this exact stage is still under research. The following resource can be used as an initial support resource, especially for English-speaking students.
+        </div>
+        <div class="resource-card">
+          <span class="resource-tag english">English</span>
+          <div class="resource-name">Islamic Law — Fiqh — Ahkam — Jurisprudence</div>
+          <div class="resource-by">By: IslamKC Lessons Made Easy</div>
+          <a class="resource-link" href="https://youtube.com/playlist?list=PLzd7j-uV0vwGQgXR2dfcUB5r1qmVf0-UI&amp;si=57EvrzCVZanREoBy" target="_blank" rel="noopener">▶ Watch Playlist</a>
+        </div>
+        <div class="note-box">
+          <strong>Note:</strong> United Ummah is still searching for more complete and suitable resources for this stage, especially in Urdu and for younger students. If anyone knows a reliable book, course or playlist that properly covers daily Islamic laws and essential Ahkam, they may contact United Ummah.<br><br>
+          📧 <strong>unitedummahofficials@gmail.com</strong><br>
+          📱 Instagram: <strong>@unitedummahofficials</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-stage 5.2 -->
+    <div class="sub-stage">
+      <div class="sub-stage-header" onclick="toggleSubStage(this)">
+        <div class="sub-stage-num">5.2</div>
+        <div class="sub-stage-title">Islamic Systems and Khilafah</div>
+        <span class="sub-stage-chevron">▼</span>
+      </div>
+      <div class="sub-stage-body">
+        <p style="color:var(--text-secondary); font-size:13.5px; margin-bottom:16px;">
+          This section is designed to help students understand Islam as a complete system of life. Topics include:
+        </p>
+        <ul class="bullet-list" style="margin-bottom:20px;">
+          <li>Shariah (Islamic law as a complete framework).</li>
+          <li>Islamic political system.</li>
+          <li>Islamic economic system.</li>
+          <li>Islamic social system.</li>
+          <li>Islamic education system.</li>
+          <li>Islamic judicial system.</li>
+          <li>Concept of Khilafah.</li>
+          <li>Role of the Khalifah.</li>
+          <li>Role of Shura (consultation council).</li>
+          <li>Role of the general public.</li>
+          <li>Role of the army.</li>
+          <li>Role of institutions under Islamic governance.</li>
+          <li>Responsibilities of Muslims within the Ummah.</li>
+        </ul>
+        <div class="note-box">
+          At the moment, United Ummah does not yet have one complete, reliable and properly structured playlist or course for this full section. Until such a course is available, this stage can be handled through:<br><br>
+          • Research-based tasks<br>
+          • Teacher-guided discussions<br>
+          • Scholar-reviewed notes<br>
+          • Selected readings<br>
+          • Controlled study sessions<br>
+          • Future course development<br><br>
+          United Ummah intends to continue searching for suitable resources. If needed, United Ummah may contact course makers, teachers and scholars to help develop a proper course for this stage.
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box" style="border-color:rgba(201,162,39,.3); background:rgba(201,162,39,.06); margin-bottom:0;">
+      <strong style="color:var(--gold-light);">Important Note for Stage 5:</strong> Stage 5 should be taught with wisdom, balance and scholarly guidance. Fiqh, Islamic systems and Khilafah-related topics must be handled carefully so that students develop clarity, responsibility and understanding rather than confusion.
+    </div>
+
+    <div class="outcome-box">
+      <div class="outcome-title">Stage 5 Outcome</div>
+      <ul class="bullet-list">
+        <li>Understand basic Islamic daily life rules.</li>
+        <li>Understand essential Islamic terminology.</li>
+        <li>Understand Islam as a complete way of life.</li>
+        <li>Understand the basic concept of Khilafah.</li>
+        <li>Understand the basic roles of Khalifah, Shura, public, army and institutions.</li>
+        <li>Understand that Islam guides worship, family, society, economy, justice and governance.</li>
+        <li>Be ready for lifelong advanced Islamic learning.</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  <!-- ─────────────────────── STAGE 6 -->
+  <div id="stage6">
+  <div class="stage-header" onclick="toggleStage(this)">
+    <div class="stage-number">6</div>
+    <div class="stage-header-text">
+      <div class="stage-number-label">Stage 6 — Continues throughout life</div>
+      <div class="stage-title-main">Lifelong Advanced Islamic Learning</div>
+      <div class="stage-audience-badges">
+        <span class="badge badge-all">Lifelong</span>
+      </div>
+    </div>
+    <div class="stage-chevron">▼</div>
+  </div>
+  <div class="stage-body">
+    <p style="color:var(--text-secondary); font-size:14px; margin-bottom:24px;">
+      Stage 6 continues <strong style="color:var(--green-300)">throughout life</strong>. After completing the earlier stages, the student should continue learning from reliable teachers, scholars, books and institutions.
+    </p>
+    <p style="color:var(--text-secondary); font-size:14px; margin-bottom:24px;">
+      Recommended areas of continued learning include:
+    </p>
+    <div class="card-grid" style="margin-bottom:24px;">
+      <div class="card"><div class="card-icon">📜</div><div class="card-title">Tafseer</div><div class="card-body">Deep study of the meanings and interpretations of the Holy Quran.</div></div>
+      <div class="card"><div class="card-icon">📚</div><div class="card-title">Hadith</div><div class="card-body">Study of the sayings, actions and approvals of Prophet Muhammad ﷺ.</div></div>
+      <div class="card"><div class="card-icon">⚖️</div><div class="card-title">Fiqh (Advanced)</div><div class="card-body">Deep study of Islamic jurisprudence and the rulings of the Shariah.</div></div>
+      <div class="card"><div class="card-icon">🔤</div><div class="card-title">Advanced Arabic</div><div class="card-body">Study of the Arabic language to understand the Quran and Islamic texts directly.</div></div>
+      <div class="card"><div class="card-icon">🌍</div><div class="card-title">Islamic History</div><div class="card-body">In-depth study of Islamic civilization, dynasties, scholars and their contributions.</div></div>
+      <div class="card"><div class="card-icon">📢</div><div class="card-title">Dawah</div><div class="card-body">Learning the methods, etiquettes and responsibilities of calling people to Islam.</div></div>
+      <div class="card"><div class="card-icon">💎</div><div class="card-title">Tazkiyah</div><div class="card-body">Purification of the soul, spiritual development and closeness to Allah.</div></div>
+      <div class="card"><div class="card-icon">🏛️</div><div class="card-title">Islamic Civilization</div><div class="card-body">Study of the contributions and achievements of Islamic civilization across history.</div></div>
+      <div class="card"><div class="card-icon">🌐</div><div class="card-title">Contemporary Challenges</div><div class="card-body">Understanding modern challenges and how Islam provides guidance for them.</div></div>
+      <div class="card"><div class="card-icon">🤝</div><div class="card-title">Service to the Ummah</div><div class="card-body">Active engagement in the welfare, development and revival of the Muslim Ummah.</div></div>
+    </div>
+
+    <div style="background:rgba(46,168,41,.07); border:1px solid rgba(46,168,41,.2); border-radius:10px; padding:20px; margin-bottom:20px;">
+      <div style="font-weight:700; color:var(--green-300); margin-bottom:12px;">Recommended Starting Resources</div>
+      <ul class="bullet-list">
+        <li>Al-Bidaya Wal-Nihaya (The Beginning and the End) — comprehensive Islamic history.</li>
+        <li>Tafheem-ul-Quran — Mawdudi's detailed commentary on the Quran.</li>
+        <li>Advanced Arabic — to read primary Islamic texts directly.</li>
+        <li>Hadith and Fiqh — study of Islamic rulings from authentic sources.</li>
+      </ul>
+    </div>
+
+    <div class="note-box">
+      These can be studied gradually and in parallel according to the student's capacity, teacher guidance and available time. The goal is to <strong>keep learning, implementing and teaching others</strong>.<br><br>
+      A Muslim's journey of knowledge does not end with one course or one curriculum. This curriculum builds the foundation. After that, the student should continue learning throughout life.
+    </div>
+  </div>
+  </div>
+
+</section>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ AFTER FOUNDATION -->
+<div class="page-wrap">
+
+<section class="section fade-in" id="after">
+  <div class="section-label">After the Foundation</div>
+  <h2 class="section-title">What Comes After the Deen Foundation</h2>
+  <div class="lead">
+    After completing the Deen Foundation, United Ummah will gradually move students towards <strong style="color:var(--green-300)">practical revival tracks.</strong> These are the next stages of the United Ummah journey — but they can only begin on top of a solid foundation.
+  </div>
+
+  <div class="note-box" style="margin-bottom:32px;">
+    <strong>Important:</strong> No student should jump to these tracks without completing the Deen Foundation. A person without foundation cannot serve the mission — they will only add to the confusion.
+  </div>
+
+  <div class="track-grid">
+    <div class="track-card"><div class="track-card-icon">🕌</div><div class="track-card-name">Masjid Revival</div><div class="track-card-desc">Restoring the Masjid to its central role in the Muslim community.</div></div>
+    <div class="track-card"><div class="track-card-icon">📖</div><div class="track-card-name">Madrassah Support</div><div class="track-card-desc">Strengthening Islamic education institutions.</div></div>
+    <div class="track-card"><div class="track-card-icon">💰</div><div class="track-card-name">Financial Strength</div><div class="track-card-desc">Building economic independence for the Muslim Ummah.</div></div>
+    <div class="track-card"><div class="track-card-icon">🛠️</div><div class="track-card-name">Skill Development</div><div class="track-card-desc">Acquiring useful skills that serve Islam and the Ummah.</div></div>
+    <div class="track-card"><div class="track-card-icon">💪</div><div class="track-card-name">Physical Fitness</div><div class="track-card-desc">Maintaining the body as a trust from Allah.</div></div>
+    <div class="track-card"><div class="track-card-icon">🏹</div><div class="track-card-name">Sunnah Physical Skills</div><div class="track-card-desc">Archery, swimming and horse riding where possible.</div></div>
+    <div class="track-card"><div class="track-card-icon">🛡️</div><div class="track-card-name">Lawful Self-Defense</div><div class="track-card-desc">Awareness and preparation through lawful, Islamic means.</div></div>
+    <div class="track-card"><div class="track-card-icon">📲</div><div class="track-card-name">Digital Activism</div><div class="track-card-desc">Using digital platforms to spread truth and serve the Ummah.</div></div>
+    <div class="track-card"><div class="track-card-icon">🎙️</div><div class="track-card-name">Media Work</div><div class="track-card-desc">Creating Islamic content, narrative and media presence.</div></div>
+    <div class="track-card"><div class="track-card-icon">🔐</div><div class="track-card-name">Cyber Defense</div><div class="track-card-desc">Protecting Muslim digital spaces and information.</div></div>
+    <div class="track-card"><div class="track-card-icon">🤝</div><div class="track-card-name">Community Service</div><div class="track-card-desc">Direct service to the Muslim community and society.</div></div>
+    <div class="track-card"><div class="track-card-icon">👑</div><div class="track-card-name">Leadership &amp; Organization</div><div class="track-card-desc">Building the structures needed to serve the Ummah.</div></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ HOW WE BUILD -->
+<section class="section fade-in" id="how-we-build">
+  <div class="section-label">The Method</div>
+  <h2 class="section-title">This Is How United Ummah Builds</h2>
+  <div class="lead">Step by step. Level by level. With patience, discipline and sincerity.</div>
+
+  <div class="phase-list" style="margin-top:28px;">
+    <div class="phase-item">
+      <div class="phase-left"><div class="phase-num">1</div><div class="phase-line"></div></div>
+      <div class="phase-content"><div class="phase-title">Build the Muslim</div><div class="phase-desc">Quran, Seerah, Iman, Akhirah, Islamic knowledge, discipline and sincerity. This is Stage 1 through 6 of the curriculum.</div></div>
+    </div>
+    <div class="phase-item">
+      <div class="phase-left"><div class="phase-num">2</div><div class="phase-line"></div></div>
+      <div class="phase-content"><div class="phase-title">Build the Family</div><div class="phase-desc">A Muslim with foundation builds a home that reflects Islam in every aspect of daily life.</div></div>
+    </div>
+    <div class="phase-item">
+      <div class="phase-left"><div class="phase-num">3</div><div class="phase-line"></div></div>
+      <div class="phase-content"><div class="phase-title">Revive the Masjid</div><div class="phase-desc">The Masjid returns to its role as the center of knowledge, community, guidance and leadership.</div></div>
+    </div>
+    <div class="phase-item">
+      <div class="phase-left"><div class="phase-num">4</div><div class="phase-line"></div></div>
+      <div class="phase-content"><div class="phase-title">Strengthen the Community</div><div class="phase-desc">Communities built on Islamic foundations, supporting each other, growing together.</div></div>
+    </div>
+    <div class="phase-item">
+      <div class="phase-left"><div class="phase-num">5</div><div class="phase-line"></div></div>
+      <div class="phase-content"><div class="phase-title">Build Financial, Physical, Digital and Organizational Strength</div><div class="phase-desc">Each practical revival track is activated — organized, lawful, Islamic and effective.</div></div>
+    </div>
+    <div class="phase-item">
+      <div class="phase-left"><div class="phase-num">6</div></div>
+      <div class="phase-content"><div class="phase-title">Prepare People for Greater Service to the Ummah</div><div class="phase-desc">Standing against oppression through lawful, Islamic, disciplined and effective means. Preparing, not rushing. Building, not destroying.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ CONTACT -->
+<section class="section fade-in" id="contact">
+  <div class="section-label">United Ummah</div>
+  <h2 class="section-title">Connect With Us</h2>
+  <div class="lead">For questions, feedback, resource suggestions or to join the mission:</div>
+  <div class="contact-row">
+    <a class="contact-item" href="mailto:unitedummahofficials@gmail.com">
+      <span>✉️</span> unitedummahofficials@gmail.com
+    </a>
+    <a class="contact-item" href="https://instagram.com/unitedummahofficials" target="_blank" rel="noopener">
+      <span>📱</span> @unitedummahofficials
+    </a>
+  </div>
+</section>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════ ENDING VISION -->
+<div class="vision-section" id="vision">
+<div class="vision-hero">
+  <div class="vision-glow"></div>
+
+  <div style="position:relative; z-index:1; max-width:860px; margin:0 auto;">
+
+    <div class="section-label" style="justify-content:center; margin-bottom:20px;">A Message to Every United Ummah Student</div>
+
+    <h2 class="vision-title">
+      You Did Not Come Here by Accident.<br>
+      <span>You Were Called.</span>
+    </h2>
+
+    <p style="color:var(--text-secondary); font-size:15px; line-height:1.85; max-width:640px; margin:24px auto 36px;">
+      The fact that you are reading these words — that you are here, willing to learn, willing to prepare, willing to begin — is itself a sign. Most people are sleeping. Most people are distracted. Most people are waiting for someone else to act.
+    </p>
+    <p style="color:var(--text-secondary); font-size:15px; line-height:1.85; max-width:640px; margin:0 auto 48px;">
+      But you are here. And that is the beginning.
+    </p>
+
+    <!-- SALAHUDDIN BOX -->
+    <div class="salahuddin-box">
+      <div class="salahuddin-box-inner">
+        <div class="salahuddin-box-name">The Example of Salahuddin Ayyubi</div>
+        <blockquote>
+          "Salahuddin Ayyubi did not stand against oppression as an empty slogan. He was the product of Iman, discipline, knowledge, leadership, sacrifice, preparation, and a revived Islamic environment."
+        </blockquote>
+        <p>
+          He did not appear from nowhere. He was built — by scholars, by a revived Ummah, by years of patient preparation. In the same way, <strong style="color:var(--gold-pale);">United Ummah does not want to create emotional followers. United Ummah wants to build prepared Muslims.</strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- THE ROADMAP STEPS -->
+    <div class="roadmap-steps">
+      <div class="roadmap-step">
+        <div class="roadmap-step-icon">🧱</div>
+        <div class="roadmap-step-text"><strong>Build the Muslim</strong>Foundation first</div>
+      </div>
+      <span class="roadmap-arrow">→</span>
+      <div class="roadmap-step">
+        <div class="roadmap-step-icon">🏠</div>
+        <div class="roadmap-step-text"><strong>Build the Family</strong>One home at a time</div>
+      </div>
+      <span class="roadmap-arrow">→</span>
+      <div class="roadmap-step">
+        <div class="roadmap-step-icon">🕌</div>
+        <div class="roadmap-step-text"><strong>Revive the Masjid</strong>The heart of the Ummah</div>
+      </div>
+      <span class="roadmap-arrow">→</span>
+      <div class="roadmap-step">
+        <div class="roadmap-step-icon">🌍</div>
+        <div class="roadmap-step-text"><strong>Serve the Ummah</strong>With strength &amp; wisdom</div>
+      </div>
+      <span class="roadmap-arrow">→</span>
+      <div class="roadmap-step">
+        <div class="roadmap-step-icon">👑</div>
+        <div class="roadmap-step-text"><strong>Khilafah</strong>When the people are ready</div>
+      </div>
+    </div>
+
+    <!-- FINAL CALLS -->
+    <div class="final-calls">
+      <div class="final-call-item">
+        <span class="call-icon">📖</span>
+        <span>We are not waiting helplessly for Imam Mahdi. <strong style="color:var(--green-300);">We are preparing ourselves to become worthy Muslims before that time comes.</strong></span>
+      </div>
+      <div class="final-call-item">
+        <span class="call-icon">⏳</span>
+        <span>If Imam Mahdi appears in our lifetime — we should not be among the weak, confused and unprepared. <strong style="color:var(--green-300);">We should be among those who were ready.</strong></span>
+      </div>
+      <div class="final-call-item">
+        <span class="call-icon">🌱</span>
+        <span>If Imam Mahdi does not appear in our lifetime — we still have a duty to serve Islam, revive the Ummah, stand against oppression through lawful means, and <strong style="color:var(--green-300);">prepare the next generation.</strong></span>
+      </div>
+      <div class="final-call-item">
+        <span class="call-icon">☪</span>
+        <span>Not noise. Not chaos. Not slogans. <strong style="color:var(--green-300);">A roadmap. A foundation. A serious preparation.</strong></span>
+      </div>
+    </div>
+
+    <!-- ENCOURAGEMENT -->
+    <div style="max-width:680px; margin:48px auto 0; text-align:center;">
+      <div style="font-family:'Cinzel',serif; font-size:clamp(18px,3vw,26px); font-weight:700; color:var(--text-primary); margin-bottom:20px; line-height:1.4;">
+        Every great revival began with one person<br>who decided to take the first step.
+      </div>
+      <p style="color:var(--text-secondary); font-size:15px; line-height:1.85; margin-bottom:24px;">
+        You do not need to change the entire Ummah today. You need to change <em>yourself</em> today. Read the Quran. Learn the Seerah. Understand the Akhirah. Discipline your nafs. Build your character. Strengthen your Iman.
+      </p>
+      <p style="color:var(--text-secondary); font-size:15px; line-height:1.85; margin-bottom:32px;">
+        When you become the Muslim that Allah intended you to be — <strong style="color:var(--green-300);">you become part of the solution for the Ummah.</strong>
+      </p>
+      <p style="font-size:16px; font-weight:600; color:var(--green-300); letter-spacing:.04em;">
+        Begin. Right now. With Stage 1. With the first ayah. With the first step.
+      </p>
+    </div>
+
+    <!-- AMEEN BOX -->
+    <div class="ameen-box">
+      <div class="ameen-arabic">اللّٰهُمَّ أَعِنَّا عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ</div>
+      <p class="ameen-dua">
+        O Allah — accept this effort. Purify our intentions. Guide our work. Unite our Ummah. Prepare us for the service of Islam. Make us among those who are worthy of carrying this mission when the time comes.
+      </p>
+      <div class="ameen-word">آمِيْن</div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer style="background:var(--bg-deepest); border-top:1px solid var(--border); padding:40px 28px; text-align:center;">
+  <div style="font-family:'Cinzel',serif; font-size:18px; font-weight:700; color:var(--green-300); margin-bottom:8px;">☪ United Ummah</div>
+  <p style="color:var(--text-muted); font-size:13px; margin-bottom:20px;">Revival Roadmap — The First Step</p>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-bottom:24px;">
+    <a href="index.html" style="color:var(--text-muted); text-decoration:none; font-size:13px; transition:color .2s;" onmouseover="this.style.color='var(--green-300)'" onmouseout="this.style.color='var(--text-muted)'">The Roadmap</a>
+    <a href="index.html" style="color:var(--text-muted); text-decoration:none; font-size:13px; transition:color .2s;" onmouseover="this.style.color='var(--green-300)'" onmouseout="this.style.color='var(--text-muted)'">First Step</a>
+    <a href="index.html" style="color:var(--text-muted); text-decoration:none; font-size:13px; transition:color .2s;" onmouseover="this.style.color='var(--green-300)'" onmouseout="this.style.color='var(--text-muted)'">Deen Foundation</a>
+    <a href="index.html" style="color:var(--text-muted); text-decoration:none; font-size:13px; transition:color .2s;" onmouseover="this.style.color='var(--green-300)'" onmouseout="this.style.color='var(--text-muted)'">Curriculum</a>
+    <a href="index.html" style="color:var(--text-muted); text-decoration:none; font-size:13px; transition:color .2s;" onmouseover="this.style.color='var(--green-300)'" onmouseout="this.style.color='var(--text-muted)'">After Foundation</a>
+    <a href="index.html" style="color:var(--text-muted); text-decoration:none; font-size:13px; transition:color .2s;" onmouseover="this.style.color='var(--green-300)'" onmouseout="this.style.color='var(--text-muted)'">Vision</a>
+    <a href="index.html" style="color:var(--text-muted); text-decoration:none; font-size:13px; transition:color .2s;" onmouseover="this.style.color='var(--green-300)'" onmouseout="this.style.color='var(--text-muted)'">Contact</a>
+  </div>
+  <p style="color:var(--text-muted); font-size:12px;">
+    Prepared by United Ummah &nbsp;•&nbsp; unitedummahofficials@gmail.com &nbsp;•&nbsp; May Allah accept this effort. Ameen.
+  </p>
+</footer>
+
+<script>
+  // Progress bar + scroll
+  const progressBar = document.getElementById('progress-bar');
+  const backTop = document.getElementById('back-top');
+  const nav = document.getElementById('nav');
+
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.body.scrollHeight - window.innerHeight;
+    progressBar.style.width = (scrolled / total * 100) + '%';
+    backTop.classList.toggle('visible', scrolled > 400);
+    nav.classList.toggle('scrolled', scrolled > 10);
+  });
+
+  backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // Mobile nav
+  const navToggle = document.getElementById('nav-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  navToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+  // Stage accordion
+  function toggleStage(header) {
+    const body = header.nextElementSibling;
+    const isOpen = header.classList.contains('open');
+    header.classList.toggle('open', !isOpen);
+    body.classList.toggle('open', !isOpen);
+  }
+
+  // Sub-stage accordion
+  function toggleSubStage(header) {
+    const body = header.nextElementSibling;
+    const isOpen = header.classList.contains('open');
+    header.classList.toggle('open', !isOpen);
+    body.classList.toggle('open', !isOpen);
+  }
+
+  // Scroll to stage
+  function scrollToStage(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({ top, behavior: 'smooth' });
+    const header = el.querySelector('.stage-header');
+    const body = el.querySelector('.stage-body');
+    if (header && body && !header.classList.contains('open')) {
+      header.classList.add('open');
+      body.classList.add('open');
+    }
+  }
+
+  // Fade-in observer
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</main></body></html>
